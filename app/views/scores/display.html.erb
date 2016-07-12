@@ -1,2 +1,9 @@
 <h1>Scores#display</h1>
-<p>Find me in app/views/scores/display.html.erb</p>
+<p><%= @results %></p>
+
+
+<p>Your word: <%= @attempt %></p>
+<p>Time taken to answer: <%= @results[:time] %> seconds</p>
+<p>Translation: <%= @results[:translation] %></p>
+<p>Your score: <%= @results[:score] %></p>
+<p>Message: <%= @results[:message] %></p>

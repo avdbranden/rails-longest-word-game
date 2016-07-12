@@ -1,2 +1,13 @@
 <h1>Games#play</h1>
-<p>Find me in app/views/games/play.html.erb</p>
+<p>******** Welcome to the longest word-game !********</p>
+<p>Here is your grid : <%= @grid %></p>
+
+<% start_time = Time.now.to_i %>
+
+<%= form_tag("/score", method: "post") do %>
+  <%= label_tag(:shot, "What is your best shot?") %>
+  <%= text_field_tag(:shot) %>
+  <%= hidden_field_tag(:grid, @grid) %>
+  <%= hidden_field_tag(:start_time,start_time) %>
+  <%= submit_tag("Go") %>
+<% end %>
